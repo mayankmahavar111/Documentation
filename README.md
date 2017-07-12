@@ -27,14 +27,14 @@
             These value are User redis queue values.
     2.Start redis and mongodb server.
 #### How to Run 
-    1.Run the vertexServer.java class , This will start taking live input when user         post a request to the api 
-    2.Post the Request to the api : sentiment/twitter/startCampaign , Here                  request.method is "POST"    
+    1.Run the vertexServer.java class , This will start taking live input when user post a request to the api 
+    2.Post the Request to the api : sentiment/twitter/startCampaign , Here request.method is "POST"    
         2.1 Request format has to be in JSON format :
             {
 	        "campaign_id":"< Any Alphanumerical Value >",
 	        "keywords":["< Any Trending Tweets Keywords >"],
 	        "end_time":"< Time upto which tweet has to be taken >"
-	        The time will be in UTC format (only tweets untill that time will be                     streamed).
+	        The time will be in UTC format (only tweets untill that time will be streamed).
             }
             For Eg:
             {
@@ -50,7 +50,7 @@
                 {
 	            "campaign_id":"< campaign id whose sentiment  user want >"
                 }
-               After this process the results of all the sentiments will get store                 in database.
+               After this process the results of all the sentiments will get store in database.
         3.2 After completion of step (4)
         Post another request to api for getting sentiment to according to location
         Request will be post to api : sentiment/twitter/getSentiment2
@@ -59,4 +59,4 @@
     	"campaign_id":"< campaign id whose sentiment  user want >"  ,
         "location":"< location from where you want to see your sentiment score>"
         }
- This will give you sentiment score of tweets you streamed.
+ This will give you sentiment score of tweets you streamed into a text file name resorces-test.txt.
