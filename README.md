@@ -1,7 +1,7 @@
 # Sentiment Analysis
 ### Requirements
     1. jdk 1.8.0
-    2. mongo --versiom=3.4
+    2. Mongo --versiom=3.4
     3. redis queue 3.0
 #### How to start:
     1.Change the constant values in constant.java inside package 
@@ -43,7 +43,7 @@
 	        "end_time":"2017-07-07T07:00:45.95z"
             }
     3.
-        3.1 After completion of step (4),
+        3.1 After completion of step (2),
         Post another request to api for getting sentiment of specific campaign id
         Request will be post to api : sentiment/twitter/getSentiment
             3.1.1  Request will be in the JSON format 
@@ -51,7 +51,7 @@
 	            "campaign_id":"< campaign id whose sentiment  user want >"
                 }
                After this process the results of all the sentiments will get store in database.
-        3.2 After completion of step (4)
+        3.2 After completion of step (2)
         Post another request to api for getting sentiment to according to location
         Request will be post to api : sentiment/twitter/getSentiment2
         3.1.2  Request will be given in the format
